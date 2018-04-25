@@ -146,9 +146,11 @@
 
 // Configure MAG and BARO unconditionally.
 #define USE_MAG
-#define USE_MAG_HMC5883
-#define USE_MAG_QMC5883
-#define MAG_HMC5883_ALIGN       CW90_DEG
+//#define USE_MAG_HMC5883
+//#define USE_MAG_QMC5883
+#define USE_MAG_AK8963
+//#define MAG_HMC5883_ALIGN       CW90_DEG
+#define MAG_AK8963_ALIGN        CW180_DEG_FLIP
 
 #define USE_BARO
 #define USE_BARO_MS5611
@@ -247,10 +249,13 @@
 #define I2C3_SDA                NONE // PC9, CH6
 #define I2C_DEVICE              (I2CDEV_2)
 #else
-#define USE_I2C_DEVICE_1
-#define I2C_DEVICE              (I2CDEV_1)
-#define I2C1_SCL                PB8
-#define I2C1_SDA                PB9
+//#define USE_I2C_DEVICE_1
+//#define I2C_DEVICE              (I2CDEV_1)
+//#define I2C1_SCL                PB8
+//#define I2C1_SDA                PB9
+#define USE_I2C_DEVICE_2
+#define I2C2_SCL                PB10
+#define I2C2_SDA                PB11
 #endif
 
 #define USE_ADC
